@@ -148,7 +148,22 @@ print(u)
 
 func binaryToDecimal(n: Int) -> Int
 {
-    var dec = 0
-    
-    return dec
+    var (lastnum, count) = (0,0)
+    var num = n
+    var result = 1
+    while num != 0 {
+        lastnum = (lastnum * 10) + (num % 10)
+        if lastnum == 0 {
+            result = lastnum
+            count += 1
+        }else{
+            for _ in 0...count{
+                result = result * 2
+            }
+            count += 1
+        }
+        num = (Int(num/10))
+    }
+    return result
 }
+print(binaryToDecimal(n: 110))
