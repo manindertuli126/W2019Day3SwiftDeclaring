@@ -110,3 +110,45 @@ func reverse(n: Int) -> Int{
     return rev
 }
 print(reverse(n: 5147823))
+
+//call same function again and again is recursion
+func display(n: Int) -> Int
+{
+    if n == 0{
+        return 0
+    }
+    print(n)
+    return display(n: n-1)
+}
+display(n: 5)
+
+print("**** ****")
+
+func display1(n: Int)
+{
+    if n != 0{
+        display1(n: n-1)
+        print(n)
+    }
+}
+display1(n: 5)
+
+func sumofno (n: Int) -> Int{
+    if(n == 0){
+        return 0
+    }
+    return n + sumofno(n: n-1)
+}
+
+let u = sumofno(n: 6)
+print(u)
+
+// binary to decimal
+// 1010 O/P = 10
+
+func binaryToDecimal(n: Int) -> Int
+{
+    var dec = 0
+    
+    return dec
+}
